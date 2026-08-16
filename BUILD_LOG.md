@@ -31,5 +31,26 @@ What was built:
 
 **Playable result:** Player can place towers, watch enemies path down the lane, see the core take damage, and restart when the core is destroyed.
 
+---
+
+## Session 2 – 2026-08-16 (continued)
+
+### Phase 2 completed
+**Goal:** Core loop with economy, waves, win/lose
+
+What was added:
+- Scrap currency (start with 40, +8 per kill, +15 inter-wave bonus)
+- Tower cost = 25 scrap (placement is now a real decision)
+- 6 distinct waves with escalation (more enemies, faster spawn)
+- Clear win condition (survive all 6 waves)
+- Wave counter and scrap display in top bar
+- Proper restart that resets economy and waves
+
+**Playable result:** Full place → survive wave → earn scrap → place more → next wave loop works end-to-end. Player can win or lose a complete session.
+
+### GitHub
+- Repository created: https://github.com/Mototown/dust
+- README and BUILD_LOG pushed
+
 ### Next
-Phase 2 – Core Loop: add scrap currency, tower cost, multiple waves with simple escalation, and a clear win condition.
+Phase 3 – Tower variety (3–4 distinct roles) + stronger visual/audio feedback.
