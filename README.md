@@ -7,21 +7,34 @@ Pure Tower Defense prototype for the **Meta Horizon Creator Competition: Game Pr
 **Tech:** Self-contained Three.js / HTML5, fixed portrait, no external network requests.
 
 ## Current Status
-- Phase 1 complete: Playable foundation (lane, core, tower placement, enemies, restart)
-- Phase 2 in progress: Core loop (scrap, costs, waves, win condition)
+- ✅ Phase 1 complete: Playable foundation (lane, core, tower placement, enemies, restart)
+- ✅ Phase 2 complete: Core loop (scrap economy, tower cost, 6 escalating waves, win/lose conditions)
 
 ## How to run locally
 ```bash
-cd dust-lane
+# Clone or download the files, then:
 python3 -m http.server 8765
 ```
-Open `http://localhost:8765` in a portrait / mobile viewport.
+Open `http://localhost:8765` in a portrait / mobile viewport (or narrow browser window).
+
+**Required local files for full run:**
+- `index.html` (all game code)
+- `vendor/three.min.js` (Three.js r160)
+
+You can download Three.js with:
+```bash
+mkdir -p vendor
+curl -L -o vendor/three.min.js https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js
+```
 
 ## Constraints (enforced)
 - Single-player
 - Fixed portrait
 - All game code in one readable `index.html`
 - Libraries in `vendor/`
-- Fully offline
+- Fully offline / no network requests while running
 
-See `BUILD_LOG.md` for the development record.
+See `BUILD_LOG.md` for the full development record.
+
+## Next
+Phase 3: Multiple distinct tower types + stronger feedback.
